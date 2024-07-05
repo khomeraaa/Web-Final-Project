@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>finaluri</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <button id="showListBtn">News List</button>
+      <button id="showCreateBtn">Create News</button>
+    </nav>
+
+    <main id="app">
+      <section id="newsList" class="active">
+        <h1>News List</h1>
+        <table id="newsTable">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Likes</th>
+              <th>Date Updated</th>
+              <th>Date Created</th>
+              <th>Create</th>
+            </tr>
+          </thead>
+          <tbody id="newsTableBody"></tbody>
+        </table>
+      </section>
+
+      <section id="createNews">
+        <h1>Create News</h1>
+        <form id="createNewsForm">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" required />
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" required>
+              <option value="">Select Category</option>
+              <option value="Politics">Politics</option>
+              <option value="Science">Science</option>
+              <option value="Lifestyle">Lifestyle</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group half-width">
+              <label for="editorFirstName">Editor FirstName</label>
+              <input type="text" id="editorFirstName" required />
+            </div>
+            <div class="form-group half-width">
+              <label for="editorLastName">Editor LastName</label>
+              <input type="text" id="editorLastName" required />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" id="cancelBtn">Cancel</button>
+            <button type="submit">Save</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
